@@ -35,6 +35,3 @@ EntryPoint:
 
         ret
 bufInput db 10,0, 11 dup('$')
-
-
-
