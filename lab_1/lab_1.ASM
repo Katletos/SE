@@ -4,6 +4,13 @@ EntryPoint:
         mov     ah,    $0A
         mov     dx,    bufInput
         int     21h
+        
+        ;Print \n \r for windows
+        mov     ah,     $02
+        mov     dl,     10
+        int     21h
+        mov     dl,     13
+        int     21h
 
         ;Swap symbols
         mov     al,     [bufInput+1+2]
@@ -16,14 +23,6 @@ EntryPoint:
         sub     al,     [bufInput+1+5]
         add     cl,     [bufInput+1+7]
         mov     [bufInput+1+6], cl
-
-        ;Print \n \r for windows
-        mov     ah,     $02
-        mov     dl,     10
-        int     21h
-        mov     dl,     13
-        int     21h
-
 
         ;Print String
         mov     ah,     $09
