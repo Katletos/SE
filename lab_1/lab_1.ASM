@@ -14,7 +14,7 @@ EntryPoint:
 
         ;Swap symbols
         mov     al,     [bufInput+1+2]
-        mov     cl,    [bufInput+1+8]
+        mov     cl,     [bufInput+1+8]
         mov     [bufInput+1+2], cl
         mov     [bufInput+1+8], al
 
