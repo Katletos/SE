@@ -8,7 +8,6 @@ EntryPoint:
         call    PrintEven
         call    Waiting
 
-
 PrintEven:
         mov     ah, $02
         mov     cx, SIZE
@@ -16,7 +15,7 @@ PrintEven:
         mov     byte  dl, [bx]
 
         test    dl, 1
-        jnz     .Odd    ;нечетное, переход на метку Odd
+        jnz     .Odd    ;Г­ГҐГ·ГҐГІГ­Г®ГҐ, ГЇГҐГ°ГҐГµГ®Г¤ Г­Г  Г¬ГҐГІГЄГі Odd
 
         test    dl, dl
         js      .ifNegativeNumber
@@ -27,7 +26,7 @@ PrintEven:
         int     21h
 
         mov     byte dl, [bx]
-        ;Перевод в прямой код
+        ;ГЏГҐГ°ГҐГўГ®Г¤ Гў ГЇГ°ГїГ¬Г®Г© ГЄГ®Г¤
         not     dl
         add     dl, 1
         add     dl, '0'
@@ -60,7 +59,7 @@ PrintArr:
         int     21h
 
         mov     dl, [bx]
-        ;Перевод в прямой код
+        ;ГЏГҐГ°ГҐГўГ®Г¤ Гў ГЇГ°ГїГ¬Г®Г© ГЄГ®Г¤
         not     dl
         add     dl, 1
         add     dl, '0'
