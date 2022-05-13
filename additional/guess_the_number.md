@@ -194,4 +194,5 @@ str_crlf:     db 10, 13, '$'
 
 rnd_number:   dw 42
 input:        dw 0
-attempts      =  10```
+attempts      =  10
+```
