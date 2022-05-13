@@ -15,7 +15,7 @@ PrintEven:
         mov     byte  dl, [bx]
 
         test    dl, 1
-        jnz     .Odd    ;íå÷åòíîå, ïåðåõîä íà ìåòêó Odd
+        jnz     .Odd    
 
         test    dl, dl
         js      .ifNegativeNumber
@@ -59,7 +59,6 @@ PrintArr:
         int     21h
 
         mov     dl, [bx]
-        ;Ïåðåâîä â ïðÿìîé êîä
         not     dl
         add     dl, 1
         add     dl, '0'
