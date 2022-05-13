@@ -21,10 +21,7 @@ EntryPoint:
         call    Waiting
         ret
 
-
 num_input:
-
-
         xor     bx,     bx
         xor     cx,     cx
         mov     dl,     1
