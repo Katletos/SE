@@ -1,0 +1,2 @@
+KEY_ENTER       = $000D
+KEY_ESCAPE      = $001B
