@@ -22,31 +22,23 @@ PrintEven:
         jnz     .Odd    
 
         test    dl, dl
-        js      .ifNegativeNumber
         jns     .ifPositiveNumber
 
-.ifNegativeNumber:
         mov     dl, '-'
         int     21h
 
         mov     byte dl, [bx]
-        ;Ïåðåâîä â ïðÿìîé êîä
         not     dl
         add     dl, 1
-        add     dl, '0'
-        int     21h
-        jmp    .Odd
 
 .ifPositiveNumber:
         add     dl, '0'
         int     21h
-        jmp    .Odd
-
- .Odd:
+        
         inc     bx
         loop    @B
         ret
-
+        
 
 PrintArr:
         mov     ah, $02
