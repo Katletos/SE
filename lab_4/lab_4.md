@@ -48,24 +48,18 @@ PrintArr:
         mov     dl, [bx]
 
         test    dl, dl
-        js      .ifNegativeNumber
         jns     .ifPositiveNumber
 
-.ifNegativeNumber:
         mov     dl, '-'
         int     21h
 
         mov     dl, [bx]
         not     dl
         add     dl, 1
-        add     dl, '0'
-        int     21h
-        jmp    .success
 
 .ifPositiveNumber:
         add     dl, '0'
         int     21h
-        jmp    .success
 
 .success:
         inc     bx
