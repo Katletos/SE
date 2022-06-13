@@ -31,13 +31,11 @@ PrintEven:
 .ifPositiveNumber:
         add     dl, '0'
         int     21h
-        jmp    .Odd
-
- .Odd:
+        
         inc     bx
         loop    @B
         ret
-
+        
 
 PrintArr:
         mov     ah, $02
