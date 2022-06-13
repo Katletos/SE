@@ -2,7 +2,7 @@
 Дан целочисленный одномерный массив. Вывести на экран четные элементы массива и подсчитать их количество.
 
 ``` assembly
-   org  100h
+          org  100h
 EntryPoint:
 
         mov     bx, Arr
@@ -22,19 +22,20 @@ PrintEven:
         jnz     .Odd    
 
         test    dl, dl
-        jns     .ifPositiveNumber
+        jnz     .ifPositiveNumber
 
         mov     dl, '-'
         int     21h
 
         mov     byte dl, [bx]
+        ;Ïåðåâîä â ïðÿìîé êîä
         not     dl
         add     dl, 1
 
 .ifPositiveNumber:
         add     dl, '0'
         int     21h
-        
+.Odd:
         inc     bx
         loop    @B
         ret
