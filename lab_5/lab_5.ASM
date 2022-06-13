@@ -7,17 +7,15 @@ EntryPoint:
 @@:
         repne scasb
 
-        jne     .exit
-
-        mov     dx,     di
+        mov     dx,     di ;scabs возвращает адрес памяти в di
         sub     dx,     String
 
         push    dx
         call    PrintChar
 
-        cmp     cx,     0
+        test    cx,     cx
         jnz     @B
-.exit:
+
         call    Waiting
         ret
 
