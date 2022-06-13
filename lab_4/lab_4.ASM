@@ -18,7 +18,7 @@ PrintEven:
         jnz     .Odd    
 
         test    dl, dl
-        jns     .ifPositiveNumber
+        jnz     .ifPositiveNumber
 
         mov     dl, '-'
         int     21h
@@ -31,7 +31,7 @@ PrintEven:
 .ifPositiveNumber:
         add     dl, '0'
         int     21h
-        
+.Odd:
         inc     bx
         loop    @B
         ret
