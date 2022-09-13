@@ -1,4 +1,4 @@
-﻿program laba4;
+﻿program lab7;
 {$APPTYPE CONSOLE}
 
 uses
