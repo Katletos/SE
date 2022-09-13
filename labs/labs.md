@@ -765,7 +765,7 @@ CalcExpressionRegisters:
 Разработать программу на Delphi с использованием ассемблерной вставки
 ### Текст программы
 ```
-program laba4;
+program lab7;
 {$APPTYPE CONSOLE}
 
 uses
